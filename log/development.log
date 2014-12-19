@@ -1,0 +1,129 @@
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-18 16:45:28 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.slim within layouts/application (28.0ms)
+WARNING on line 23 of /Users/rodrigodalcin/Sites/Dynamo/dynamour/app/assets/stylesheets/modules/_buttons.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 25 of /Users/rodrigodalcin/Sites/Dynamo/dynamour/app/assets/stylesheets/modules/_buttons.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 27 of /Users/rodrigodalcin/Sites/Dynamo/dynamour/app/assets/stylesheets/modules/_buttons.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 29 of /Users/rodrigodalcin/Sites/Dynamo/dynamour/app/assets/stylesheets/modules/_buttons.sass:
+This selector doesn't have any properties and will not be rendered.
+
+WARNING on line 31 of /Users/rodrigodalcin/Sites/Dynamo/dynamour/app/assets/stylesheets/modules/_buttons.sass:
+This selector doesn't have any properties and will not be rendered.
+
+Completed 200 OK in 3594ms (Views: 3580.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-18 16:45:32 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-18 16:45:32 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-18 16:45:32 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-18 16:45:32 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-18 16:45:32 -0500
+
+
+Started GET "/assets/manifest.css?body=1" for 127.0.0.1 at 2014-12-18 16:45:32 -0500
+
+
+Started GET "/assets/font-awesome/fontawesome-webfont.woff" for 127.0.0.1 at 2014-12-18 16:45:33 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-18 16:53:03 -0500
+
+
+Started GET "/assets/manifest.css?body=1" for 127.0.0.1 at 2014-12-18 16:53:03 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-19 11:21:36 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.slim within layouts/application (24.8ms)
+Completed 200 OK in 176ms (Views: 162.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/manifest.css?body=1" for 127.0.0.1 at 2014-12-19 11:21:36 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-19 11:21:36 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-19 11:21:36 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-19 11:21:36 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-19 11:21:36 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-19 11:21:36 -0500
+
+
+Started GET "/assets/font-awesome/fontawesome-webfont.woff" for 127.0.0.1 at 2014-12-19 11:21:36 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-19 14:42:45 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.slim within layouts/application (29.6ms)
+Completed 200 OK in 887ms (Views: 854.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-19 14:42:46 -0500
+
+
+Started GET "/assets/manifest.css?body=1" for 127.0.0.1 at 2014-12-19 14:42:46 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-19 14:42:46 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-19 14:42:46 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-19 14:42:46 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-19 14:42:46 -0500
+
+
+Started GET "/assets/font-awesome/fontawesome-webfont.woff" for 127.0.0.1 at 2014-12-19 14:42:46 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-19 14:50:04 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.slim within layouts/application (11.2ms)
+Completed 200 OK in 107ms (Views: 105.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/manifest.css?body=1" for 127.0.0.1 at 2014-12-19 14:50:04 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-19 14:50:04 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-19 14:50:04 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-19 14:50:04 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-19 14:50:04 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-19 14:50:04 -0500
+
+
+Started GET "/assets/font-awesome/fontawesome-webfont.woff" for 127.0.0.1 at 2014-12-19 14:50:05 -0500

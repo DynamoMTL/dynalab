@@ -1,0 +1,145 @@
+// *************************************
+//
+//   Helpers
+//   -> Functions, Mixins, Extends, Animations
+//
+// *************************************
+
+// -------------------------------------
+//   Functions
+// -------------------------------------
+
+// ----- Em ----- //
+// -> Converts pixel value to an em
+//
+// $target - the target pixel size
+// $context - the context font-size
+
+@function em($target, $context: $b-fontSize)
+  @if ($target == 0)
+    @return 0
+  @else
+    @return ($target / $context) * 1em
+
+// -------------------------------------
+//   Mixins
+// -------------------------------------
+
+// ----- Font Face ----- //
+// -> https://github.com/thoughtbot/bourbon/edit/master/app/assets/stylesheets/css3/_font-face.scss#
+//
+// $family - the font-family
+// $path - the font path
+// $weight - the font-weight
+// $style - the font-style
+// $asset-pipeline - use the Rails asset pipeline (boolean)
+
+@mixin font-face($family, $path, $weight: normal, $style: normal, $asset-pipeline: true)
+  @font-face
+    font-family: $family
+    font-style: $style
+    font-weight: $weight
+    @if $asset-pipeline == true
+      src: font-url('#{$path}.eot')
+      src: font-url('#{$path}.eot?#iefix') format('embedded-opentype'), font-url('#{$path}.woff') format('woff'), font-url('#{$path}.ttf') format('truetype'), font-url('#{$path}.svg##{$family}') format('svg')
+    @else
+      src: url('#{$path}.eot')
+      src: url('#{$path}.eot?#iefix') format('embedded-opentype'), url('#{$path}.woff') format('woff'), url('#{$path}.ttf') format('truetype'), url('#{$path}.svg##{$family}') format('svg')
+
+
+// ----- CSS transitions ----- //
+
+@mixin css-transitions($time: .25s, $transition: ease)
+  -moz-transition: all $time $transition
+  -webkit-transition: all $time $transition
+  -ms-transition: all $time $transition
+  -o-transition: all $time $transition
+  transition: all $time $transition
+
+
+// ----- Placeholder ----- //
+
+@mixin placeholder
+  &::-webkit-input-placeholder
+    @content
+  &:-moz-placeholder
+    @content
+  &::-moz-placeholder
+    @content
+  &:-ms-input-placeholder
+    @content
+
+
+// ----- Vertical align ----- //
+
+@mixin vertical-align
+  @include transform(translateY(-50%))
+  position: relative
+  top: 50%
+
+
+// ----- Background image image-2x for Retina display ----- //
+// $image-standard - the non retina image
+// $image-retina - the retina image
+
+@mixin image-2x($image-standard, $image-retina)
+  @include replace-text-with-dimensions($image-standard)
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx)
+    background-image: image-url($image-retina)
+    background-size: 100% 100%
+
+// ----- Respond-to ----- //
+// -> Generates a media query
+//
+// $val - the breakpoint size
+// $query - the type of query ('min-width', 'max-width')
+// $media - the media type ('screen', 'print', etc.)
+// @content - the generated content within the mixin
+
+@mixin respond-to($val, $query: min-width, $media: screen)
+  @media #{$media} and ($query: $val)
+    @content
+
+
+// ----- Rem mixin ----- //
+// you can use px, rem, %
+// @include rem(font-size, 14px);
+// @include rem(margin, 0 auto 1);
+// @include rem(padding-bottom, 3%);
+
+@mixin rem($property, $values)
+  // Create a couple of empty lists as output buffers.
+  $font-size: $b-fontSize
+  $px-values: ()
+  $rem-values: ()
+
+  // Loop through the $values list
+  @each $value in $values
+    // For each property value, if it's in rem or px, derive both rem and
+    // px values for it and add those to the end of the appropriate buffer.
+    // Ensure all pixel values are rounded to the nearest pixel.
+    @if $value == 0 or $value == 0px
+      // 0 -- use it without a unit
+      $px-values: join($px-values, 0)
+      $rem-values: join($rem-values, 0)
+    @else if type-of($value) == number and not unitless($value) and (unit($value) == px)
+      // px value given - calculate rem value from font-size
+      $new-rem-value: $value / $font-size
+      $px-values: join($px-values, round($value))
+      $rem-values: join($rem-values, #{$new-rem-value}rem)
+    @else if type-of($value) == number and not unitless($value) and (unit($value) == "%")
+      // % value given - don't add px or rem
+      $px-values: join($px-values, #{$value})
+      $rem-values: join($rem-values, #{$value})
+    @else if $value == auto
+      // auto - don't add px or rem
+      $px-values: join($px-values, auto)
+      $rem-values: join($rem-values, auto)
+    @else
+      // unitless value - use those directly as rem and calculate the px-fallback
+      $px-values: join($px-values, round($value * $font-size))
+      $rem-values: join($rem-values, #{$value}rem)
+
+  // output the converted rules
+  #{$property}: $px-values
+  #{$property}: $rem-values
