@@ -1,45 +1,83 @@
 // *************************************
 //
 //   Default variables
-//   -> YOU CAN OVERIDE THESE VARIABLES HERE
+//   -> Fonts, Variables
 //
 // *************************************
+
+// -------------------------------------
+//   Colors
+// -------------------------------------
+
+$white: #ffffff !default
+$black: #000000 !default
+$blue: #477dca
+$dark-gray: #333
+$medium-gray: #999
+$light-gray: #ddd
+$b-background-color: #fff
+$b-font-color: $dark-gray
+$action-color: $blue
 
 // -------------------------------------
 //   Borders & Box Shadow
 // -------------------------------------
 
-// $b-borderRadius: 3px
-// $b-borderStyle: solid
-// $b-borderWidth: 2px
-// $b-border: $b-borderWidth $b-borderStyle $c-black
-// $b-boxShadow: 0 2px 0 rgba($c-text, 0.25)
+$b-border-radius: 3px !default
+$b-border-color: $light-gray
+$b-border: 1px solid $b-border-color
+
+$b-border-style: solid !default
+$b-border-width: 2px !default
+$b-border: $b-border-width $b-border-style $c-black !default
+$b-box-shadow: 0 2px 0 rgba($dark-gray, 0.25) !default
 
 // -------------------------------------
 //   Typography
 // -------------------------------------
 
-// $b-fontFamily-heading: sans-serif
-// $b-fontFamily: sans-serif
-// $b-fontSize: 16px
-// $b-lineHeight: 2.5
+$b-font-family: $helvetica
+$b-font-family-heading: $b-font-family
+$b-font-size: rem(14) !default
+$b-line-height: 1.5 !default
+$heading-line-height: 1.2 !default
 
 // -------------------------------------
 //   Sizing
 // -------------------------------------
 
-// $b-space: em(20px)
-// $b-space-xs: $b-space * 0.25
-// $b-space-s: $b-space * 0.5
-// $b-space-l: $b-space * 2
-// $b-space-xl: $b-space * 4
+$b-space: rem(20px) !default
+$b-space-xs: $b-space * 0.25 !default
+$b-space-s: $b-space * 0.5 !default
+$b-space-l: $b-space * 2 !default
+$b-space-xl: $b-space * 4 !default
+
+// -------------------------------------
+//   Forms
+// -------------------------------------
+
+$form-box-shadow: inset 0 1px 3px rgba(#000, 0.06)
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3)
+
+// -------------------------------------
+//   Z-index
+// -------------------------------------
+
+$stratum-bottom:     -1
+$stratum-lowest:     10
+$stratum-lower:      50
+$stratum-low:       100
+$stratum-medium:    200
+$stratum-high:      500
+$stratum-higher:   1000
+$stratum-highest:  5000
+$stratum-top:     10000
 
 // -------------------------------------
 //   Breakpoints
 // -------------------------------------
 
-// $breakpoint-desktop-average: max-width 1259px
-// $breakpoint-tablet: max-width 1024px
-// $breakpoint-mobile: max-width 767px
-// $breakpoint-mobile-portrait: max-width 479px
-
+$breakpoint-desktop-average: max-width 1259px !default
+$breakpoint-tablet: max-width 1024px !default
+$breakpoint-mobile: max-width 767px !default
+$breakpoint-mobile-portrait: max-width 479px !default
