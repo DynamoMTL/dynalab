@@ -6,6 +6,8 @@ gem 'rails', '4.1.8'
 gem 'sqlite3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
+# Use Slim for markup
+gem 'slim', '~> 2.1.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
@@ -13,9 +15,9 @@ gem 'coffee-rails', '~> 4.0.0'
 
 
 ############# DYNAMOUR STARTERS GEMS #############
-gem 'slim', '~> 2.1.0'
-gem 'compass-rails'
-gem 'breakpoint', '~> 2.0.7'
+gem 'bourbon'
+gem 'neat'
+gem 'bitters'
 gem 'font-awesome-sass'
 ######### #########
 
